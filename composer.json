@@ -28,6 +28,7 @@
         "symfony/validator": "5.4.*",
         "symfony/web-profiler-bundle": "5.4.*",
         "symfony/yaml": "5.4.*",
+        "twbs/bootstrap": "^5.3",
         "twig/extra-bundle": "^2.12|^3.0",
         "twig/twig": "^2.12|^3.0"
     },
@@ -80,4 +81,10 @@
             "require": "5.4.*"
         }
     }
+},
+"scripts": {
+  "post-update-cmd": [
+    "rm -rf public/bootstrap",
+    "cp -R vendor/twbs/bootstrap/dist public/bootstrap"
+  ]
 }
